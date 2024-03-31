@@ -8,7 +8,7 @@ module.exports = (app) => {
 
         await service.SubscribeEvents(payload)
 
-        console.log('======= Shopping Service received Event =======')
+        console.log('======= Customer Service received Event =======')
 
         return res.sendStatus(200)
     })

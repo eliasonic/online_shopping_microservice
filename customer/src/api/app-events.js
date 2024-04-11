@@ -6,10 +6,10 @@ module.exports = (app) => {
     app.use('/app-events', async (req, res, next) => {
         const { payload } = req.body
 
-        await service.SubscribeEvents(payload)
+        service.SubscribeEvents(payload)
 
         console.log('======= Customer Service received Event =======')
 
-        return res.sendStatus(200)
+        return res.status(200).json(payload)
     })
 }
